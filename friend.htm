@@ -1,0 +1,189 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>lucky7---让我们成为最好的朋友</TITLE><BGSOUND src="friend.files/miss.mid" loop=infinite>
+<META http-equiv=Content-Type content="text/html; charset=gb2312">
+<META content="MSHTML 6.00.2900.5726" name=GENERATOR><LINK href="JS/INDEX.CSS" 
+type=text/css rel=stylesheet>
+<SCRIPT>
+<!--
+locate = 0;
+function scroller()
+{if (locate !=1500 )
+{locate++;scroll(0,locate);
+clearTimeout(timer);
+var timer = setTimeout("scroller()",40);timer;}
+}
+-->
+				</SCRIPT>
+</HEAD>
+<BODY oncontextmenu="return false" onselectstart="return false" 
+background="friend.files/bk.jpg" onload=initStars();>
+<DIV id=sparks>
+<DIV id=sDiv0 style="VISIBILITY: hidden; POSITION: absolute"><FONT color=red>☆ 
+</FONT></DIV>
+<DIV id=sDiv1 style="VISIBILITY: hidden; POSITION: absolute"><FONT 
+color=yellow>☆ </FONT></DIV>
+<DIV id=sDiv2 style="VISIBILITY: hidden; POSITION: absolute"><FONT 
+color=#3399ff>☆ </FONT></DIV>
+<DIV id=sDiv3 style="VISIBILITY: hidden; POSITION: absolute"><FONT 
+color=#ff6600>☆ </FONT></DIV>
+<DIV id=sDiv4 style="VISIBILITY: hidden; POSITION: absolute"><FONT 
+color=#ff9900>☆ </FONT></DIV>
+<DIV id=sDiv5 style="VISIBILITY: hidden; POSITION: absolute"><FONT color=white>☆ 
+</FONT></DIV>
+<DIV id=sDiv6 style="VISIBILITY: hidden; POSITION: absolute"><FONT color=lime>☆ 
+</FONT></DIV>
+<DIV id=sDiv7 style="VISIBILITY: hidden; POSITION: absolute"><FONT 
+color=#66ffff>☆ </FONT></DIV>
+<DIV id=sDiv8 style="VISIBILITY: hidden; POSITION: absolute"><FONT 
+color=#ffff99>☆ </FONT></DIV>
+<DIV id=sDiv9 style="VISIBILITY: hidden; POSITION: absolute"><FONT 
+color=#ff66ff>☆ </FONT></DIV></DIV>
+<SCRIPT>
+<!-- Begin
+var ver = navigator.appVersion;
+var dom = document.getElementById ? 1 : 0;
+var ie5 = (ver.indexOf("MSIE 5") > -1 && dom) ? 1 : 0;
+var n = (document.layers);
+var ie = (document.all);
+
+var sparksAflyin = 0;
+var totalSparks = 0;
+var sparksOn = 1;
+function initStars() {
+document.onmousedown = mouseDown;
+if (n) document.captureEvents(Event.MOUSEDOWN | Event.MOUSEMOVE);
+scroller();
+}
+function mouseDown(e) {
+if (sparksOn) {
+var mousex = (n) ? e.pageX : event.x+document.body.scrollLeft;
+var mousey = (n) ? e.pageY : event.y+document.body.scrollTop;
+if (!sparksAflyin) {
+for (var k = 0; k <= 9; k++)
+eval('SHOW("sDiv'+k+'")');
+sparksAflyin = 1;
+totalSparks = 0;
+for(i = 0;i <= 9; i++)
+eval('moveTo('+i+',0,'+mousex+','+mousey+')');
+}
+}
+}
+function moveTo(i,j, mousex, mousey){
+if (j < eval('anim_'+i+'_x.length') ){
+var tempx = eval('anim_'+i+'_x[j]+mousex');
+var tempy = eval('anim_'+i+'_y[j]+mousey');
+if (ie) {
+if(tempy+30 > (document.body.offsetHeight+document.body.scrollTop))
+tempy = document.body.offsetHeight+document.body.scrollTop-30;
+if(tempx+30 > (document.body.offsetWidth+document.body.scrollLeft))
+tempx = document.body.offsetWidth+document.body.scrollLeft-30;
+eval('document.all.sDiv'+i+'.style.left = tempx;');
+eval('document.all.sDiv'+i+'.style.top = tempy;');
+}
+if (n) {
+eval('document.layers.sDiv'+i+'.left = tempx;');
+eval('document.layers.sDiv'+i+'.top = tempy;');
+}
+j++;
+
+// 彩 星 的 跳 出 速 度 (10- 100)
+setTimeout("moveTo("+i+","+j+","+mousex+","+mousey+")",30)
+}
+else {
+eval('HIDE("sDiv'+i+'")');
+totalSparks++;
+}
+if (totalSparks == 10) {
+sparksAflyin = 0;
+totalSparks = 0;
+}
+}
+function SHOW(divName){
+if (document.all)
+eval('document.all.'+divName+'.style.visibility = "visible";');
+else if (document.layers)
+eval('document.layers["'+divName+'"].visibility = "visible";');
+}
+
+
+function HIDE(divName){
+if (document.all)
+eval('document.all.'+divName+'.style.visibility = "hidden";');
+else if (document.layers)
+eval('document.layers["'+divName+'"].visibility = "hide";');
+}
+anim_0_x=new Array(20,20,10,0,0,0,0,0,0,0,0,0);
+anim_0_y=new Array(-20,-40,-60,-80,-60,-40,-20,0,20,40,60,80);
+anim_1_x=new Array(20,20,17,36,60,78,90,92,93,98,108,120,133,152,181);
+anim_1_y=new Array(-20,-20,-33,-38,-38,-27,-2,25,51,84,113,141,162,212,253);
+anim_2_x=new Array(20,20,2,3,4,5,6,7,8,9,10,12,13,15,18);
+anim_2_y=new Array(-20,-20,-33,-38,-38,-27,-2,25,51,84,113,141,162,212,253);
+anim_3_x=new Array(-20,-20,-2,-1,7,10,18,35,60,102,94,94,93,97,108,111,117,127);
+anim_3_y=new Array(-20,-25,-64,-89,-104,-150,-173,-197,-213,-199,-151,-101,-66,-17,27,87,140,189);
+anim_4_x=new Array(-20,-20,-10,-39,-30,-69,-64,-138,-154,-200,-181,-209,-191,-207,-203,-213,-202,-221,-211);
+anim_4_y=new Array(-20,-20,-28,-51,-79,-100,-135,-154,-193,-183,-149,-134,-89,-60,8,51,107,157,201);
+anim_5_x=new Array(-20,-29,-51,-72,-105,-133,-164,-189,-209,-229,-247,-270,-279,-282,-283,-283,-285,-286,-288);
+anim_5_y=new Array(-20,-55,-86,-116,-154,-183,-205,-217,-217,-198,-169,-120,-44,-8,40,87,144,190,248);
+anim_6_x=new Array(-20,-20,-7,14,44,79,143,186,217,226,234,244,250,259,265,274);
+anim_6_y=new Array(-20,-21,-72,-113,-139,-166,-188,-181,-126,-68,-3,54,134,187,215,257);
+anim_7_x=new Array(20,20,-3,-9,-13,-27,-33,-44,-54,-66,-77,-95,-107,-136,-150,-160,-164,-168,-171,-172,-172,-176,-175);
+anim_7_y=new Array(-20,-26,-43,-63,-89,-116,-145,-169,-201,-222,-240,-253,-254,-245,-220,-195,-160,-124,-81,-53,-26,19,68);
+anim_8_x=new Array(-20,20,-35,39,0,45,-1,24,-15,14,-20,35,-18,38,-11,16,49,64,81,93,100,103,109);
+anim_8_y=new Array(-20,-20,-32,-42,-62,-76,-89,-107,-132,-147,-173,-180,-192,-209,-236,-193,-119,-73,-24,51,95,130,188);
+anim_9_x=new Array(-20,-51,-89,-110,-165,-191,-228,-240,-259,-271,-277,-281,-287);
+anim_9_y=new Array(-20,-20,-35,-37,-34,-16,10,47,105,150,189,227,273);
+// End -->
+		</SCRIPT>
+
+<P align=left><IMG height=60 src="friend.files/friendhc2.gif" width=400 
+border=0></P>
+<P align=center><IMG height=285 src="friend.files/love.jpg" width=300 
+border=0></P>
+<P align=center></P>
+<P align=center><SPAN style="LETTER-SPACING: 2px"><FONT 
+color=#800000>阿拉伯传说中有两个朋友在沙漠中旅行，<BR>在旅途中的某点他们吵架了，<BR>一个还给了另外一个一记耳光。<BR>被打的觉得受辱，一言不语，在沙子上写下：<BR>"今天我的好朋友打了我一巴掌。"<BR>他们继续往前走。直到到了沃野，他们就决定停下。<BR>被打巴掌的那位差点淹死，幸好被朋友救起来了。<BR>被救起後，他拿了一把小剑在石头上刻了：<BR>"今天我的好朋友救了我一命。"</FONT></SPAN></P>
+<P align=center><FONT size=4><SPAN 
+style="LETTER-SPACING: 2px"><BR></SPAN></FONT><SPAN 
+style="LETTER-SPACING: 2px"><FONT 
+color=#0000ff>一旁好奇的朋友问道：<BR>为什麽我打了你以後</FONT><FONT color=#800000>，</FONT><FONT 
+color=#0000ff>你要写在沙子上</FONT><FONT color=#800000>，</FONT><FONT 
+color=#0000ff><BR>而现在要刻在石头上呢？</FONT></SPAN></P>
+<P align=center><FONT size=4><SPAN style="LETTER-SPACING: 2px"><FONT 
+color=#0000ff><BR></FONT></SPAN></FONT><SPAN style="LETTER-SPACING: 2px"><FONT 
+color=#ff0000>另个笑笑的回答说：<BR>当被一个朋友伤害时，<BR>要写在易忘的地方，<BR>风会负责抹去它；<BR>相反的如果被帮助，<BR>我们要把它刻在心里的深处，那里任何风都不能抹灭它。</FONT></SPAN></P>
+<P align=center><FONT size=4><SPAN 
+style="LETTER-SPACING: 2px"><BR></SPAN></FONT><SPAN 
+style="LETTER-SPACING: 2px"><FONT 
+color=#008080>朋友的相处伤害往往是无心的，帮助却是真心的，<BR>忘记那些无心的伤害；铭记那些对你真心帮助，<BR>你会发现这世上你有很多真心的朋友...</FONT></SPAN></P>
+<P align=center><FONT size=4><SPAN 
+style="LETTER-SPACING: 2px"><BR></SPAN></FONT><SPAN 
+style="LETTER-SPACING: 2px"><FONT 
+color=#008000>俗语说:<BR>你只需要花一分钟注意到一个人；<BR>一小时内变成朋友：<BR>一天让你爱上他；<BR>一但真心爱上 . . 
+.<BR>你却需要花上一生的时间将他遗忘，<BR>直至喝下那孟婆汤...</FONT></SPAN></P>
+<P align=center><FONT color=#669900><SPAN 
+style="LETTER-SPACING: 2px">朋友呀！当你看到这里，你感受到什麽？<BR>在日常生活中，就算最要好的朋友也会有磨擦，<BR>我们也许会因这些磨擦而分开。<BR>但每当夜阑人静时，我们望向星空，总会看到过去的美好回忆。<BR>不知为何，一些锁碎的回忆，却为我寂寞的心灵带来无限的震撼！<BR>就是这感觉，令我更明白你对我的重要！<BR>在此，我希望你能更珍惜你的朋友。</SPAN></FONT></P>
+<P align=center>
+<MARQUEE scrollDelay=120 width=622 height=25>把 这 文 章 寄 给 一 些 你 永 远 不 会 忘 的 人 。 还 
+有 记 得 寄 给 寄 给 你的 人 。 让 他 知 道 你 永 远 也 不 会 忘 记 他&nbsp;&nbsp; .&nbsp;&nbsp; 
+.&nbsp;&nbsp; .</MARQUEE></P>
+<P align=center></P>
+<P align=center><FONT color=#000000><BR>Please have Good care for your good 
+friend.<BR>请珍惜你身边的</FONT><FONT color=#ff0000>好朋友</FONT><FONT 
+color=#000000>！</FONT></P>
+<P align=center><FONT color=#000000>Show your friends how much you 
+care.<BR>告诉你的</FONT><FONT color=#ff0000>朋友</FONT><FONT 
+color=#000000>你有多在乎他们。<BR><BR>Send this to everyone you consider a FRIEND , 
+including the sent it.<BR>把这讯息转寄给每一个你认为是「</FONT><FONT 
+color=#ff0000>朋友</FONT><FONT color=#000000>」的人，包括把讯息寄给你的这个人。<BR><BR>If it comes 
+back to you , then you'll know you have a circle 
+friends.<BR>如果你收到回传的讯息，那你就会知道，你拥有一整票的</FONT><FONT color=#ff0000>朋友</FONT><FONT 
+color=#000000>。</FONT></P>
+<P align=center></P>
+<P align=center><B><FONT 
+color=#ff00ff>把这个小东送你你所爱的人吧,祝愿天下所有的人都能成为朋友!</FONT></B></P>
+<P align=center><FONT color=#333333><FONT color=#ff0000>转给1-8人：你的生活会悄悄起变化 
+</FONT></FONT></P>
+<P align=center><FONT color=#ff0000>转给8-16人：生活如你所愿</FONT></P>
+<P align=center><FONT color=#ff0000>转给16-24人：接下来的三个星期你会有惊喜的发现</FONT></P>
+<P align=center><FONT color=#ff0000>转给24人以上：你的梦想终会成真.</FONT> </P>
+<P></P></BODY></HTML>

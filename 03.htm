@@ -1,0 +1,367 @@
+<script language="JavaScript">
+/**********************************************************************/
+/* Function    : showHellow Created At July,12,2003
+/* Input       : None
+/* Output      : None
+/* Description : 问候语提示
+/***********************************************************************/
+function ShowHello() {
+	var welcomestring;
+	var d = new Date();	
+	h = d.getHours();
+	if(h<6)
+		welcomestring="凌晨好";
+	else if (h<9)
+		welcomestring="早上好";
+	else if (h<12)
+		welcomestring="上午好";
+	else if (h<14)
+		welcomestring="中午好";
+	else if (h<17)
+		welcomestring="下午好";
+	else if (h<19)
+		welcomestring="傍晚好";
+	else if (h<22)
+		welcomestring="晚上好";
+	else
+		welcomestring="夜里好";
+	document.write(welcomestring);
+}
+</script>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+	<meta http-equiv="Content-Language" content="zh-cn">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<title>lucky7---通讯录</title>
+	<link rel="stylesheet" type="text/css" href="images/style.css" >
+	<style>
+	.style1 {color: #FF0000}
+    .style2 {color: #0000FF}
+    .style3 {color: #000000}
+    </style>
+</head>
+<script>
+<!--
+function Helpor_net(seed)
+{ var m1 = "欢迎进入lucky7通讯录" ;
+var m2 = "" ;
+var msg=m1+m2;
+var out = " ";
+var c = 1;
+var speed = 120;
+if (seed > 100)
+{ seed-=2;
+var cmd="Helpor_net(" + seed + ")";
+timerTwo=window.setTimeout(cmd,speed);}
+else if (seed <= 100 && seed > 0)
+{ for (c=0 ; c < seed ; c++)
+{ out+=" ";}
+out+=msg; seed-=2;
+var cmd="Helpor_net(" + seed + ")";
+window.status=out;
+timerTwo=window.setTimeout(cmd,speed); }
+else if (seed <= 0)
+{ if (-seed < msg.length)
+{
+out+=msg.substring(-seed,msg.length);
+seed-=2;
+var cmd="Helpor_net(" + seed + ")";
+window.status=out;
+timerTwo=window.setTimeout(cmd,speed);}
+else { window.status=" ";
+timerTwo=window.setTimeout("Helpor_net(100)",speed);
+}
+}
+}
+Helpor_net(100);
+-->
+</script>
+	<!-- 提示窗口 层定义 -->
+	<div id='divClew' style='Z-INDEX: 2; VISIBILITY: hidden; WIDTH: 1px; POSITION: absolute; HEIGHT: 1px; '></div>
+
+<body background="images/1.gif" bgColor=#f2f2ea leftMargin=0 
+topMargin=0 marginheight="0" marginwidth="0">
+<table align=center border=0 cellpadding=0 cellspacing=0 width=776>
+  <tbody>
+  <tr>
+    <td colspan=3><img height=43 src="images/top_t.gif" 
+      width=776></td></tr>
+  <tr>
+    <td width=138><img height=39 src="images/top_l.gif" 
+      width=138></td>
+    <td bgcolor=#666b52 width=584>　</td>
+    <td width=54><img height=39 src="images/top_r.gif" 
+      width=54></td></tr>
+  <tr>
+    <td colspan=3>
+      <table border=0 cellpadding=0 cellspacing=0 width=776>
+        <tbody>
+        <tr>
+          <td background="images/left_x.gif" valign=top 
+            width=120>
+			<img height=480 src="images/left_img.gif" 
+            width=120></td>
+          <td bgcolor=#f2f2ea valign=top>
+            <table border=0 cellpadding=0 cellspacing=0 width=618>
+              <tbody>
+              <tr>
+                <td>
+                  <table border=0 cellpadding=0 cellspacing=0 width=618>
+                    <tbody>
+                    <tr>
+                      <td>
+						<a title="欢迎进入lucky7通讯录" href="03.htm">
+						<img height=120 src="images/home.jpg" 
+                        width=618 border="0"></a></td>
+                    </tr></tbody></table>
+                  <table bgcolor=#dddec5 border=0 cellpadding=0 cellspacing=0 
+                  height=22 width=618>
+                    <tbody>
+                    <tr>
+                      <td align=right>
+					  <table border=0 cellpadding=0 cellspacing=0 ><tbody><tr class=CSS_HEAD_MENU><td valign=bottom class=CSS_HEAD_MENU >|<div id='LayerMenu' style='position:absolute'> 
+</div>
+                <a href='index.html' onMouseOver=MSHL('','','show') onMouseOut=MSHL('','','hide')  title='lucky7的网上家园' class=CSS_HEAD_MENU>班级首页</a>|
+                <a href='01.htm' onMouseOver=MSHL('ShowBoardMenu','','show') onMouseOut=MSHL('ShowBoardMenu','','hide')  title='欢迎加入本班建设' class=CSS_HEAD_MENU>关于本班</a>|
+                <a href='02.htm' onMouseOver=MSHL('ShowUserMenu','','show') onMouseOut=MSHL('ShowUserMenu','','hide')  title='积极参与本班活动，踊跃出谋划策' class=CSS_HEAD_MENU>本班快讯</a>|                              
+				<a href='http://lucky7.poco.cn'  title='我们愿意分享彼此快乐' target="_blank" class=CSS_HEAD_MENU onMouseOver=MSHL('ShowAddressMenu','','show') onMouseOut=MSHL('ShowAddressMenu','','hide')>本班相册</a>|
+                <a href='http://alumni.163.com/alumni/main.jsp?prov=19&schid=27546&clsid=4695251&year=2001'  title='班级成员详细资料,访问情况,留言,相册等' target="_blank" class=CSS_HEAD_MENU onMouseOver=MSHL('ShowSmsMain','','show') onMouseOut=MSHL('ShowSmsMain','','hide')>校友录</a>|
+                <a href='http://myweb.cn.yahoo.com/userurls.html?ou=gaoerqilucky7@yahoo.cn'  title='欢迎成为我们的伙伴' target="_blank" class=CSS_HEAD_MENU onMouseOver=MSHL('ShowAlbumMenu','','show') onMouseOut=MSHL('ShowAlbumMenu','','hide')>友情链接</a>|
+                <a href='03.htm' onMouseOver=MSHL('ShowPlusInMenu','','show') onMouseOut=MSHL('ShowPlusInMenu','','hide')  title='最新通信情况' class=CSS_HEAD_MENU>通讯录</a>|</td>
+					  </tr></tbody></table>
+ </td></tr></tbody></table></td></tr></tbody></table>
+				 <table border=0 cellpadding=0 cellspacing=0 width=618>
+				 <tbody>
+					<tr>
+					  <td valign=top align=center>
+					  <br>
+					  
+<table background="images/ShowColumnUserInfo_bg.gif" border=0 cellpadding=0 cellspacing=0 width=175>
+<tbody>
+	<tr>
+		<td>
+			<!-- 标题栏 -->
+			<img border=0 height=29 src="images/ShowColumnUserInfo_top.gif" 
+			width=175></td>
+	</tr>
+	<tr>
+		<td>
+			<!-- Content in this table -->
+			<p class='CSS_HAED_CENTER2'>朋友,<Script Language=Javascript >ShowHello();</Script></p>
+			<script language="javascript">var www_helpor_net="%3Cscript%20language%3Dvbs%3E%0D%0Acont%3D1%0D%0Asub%20myButton_Onclick%28%29%0D%0A%20%20%20%20if%20mytext.value%3D%22go27lucky7%22%20then%20location%3D%22txl1.htm%22%20else%20msgbox%20%22%u5BC6%u7801%u9519%u8BEF%21%22%3Acont%3Dcont+1%0D%0A%20%20%20%20if%20cont%3E3%20then%20msgbox%22%u5BF9%u4E0D%u8D77%uFF01%u672C%u9875%u5185%u5BB9%u4F60%u4E0D%u80FD%u770B%u3002%22%3Awindow.close%20%0D%0Aend%20sub%0D%0A%3C/script%3E%0D%0A%3Ctable%20border%3D0%20cellpadding%3D0%20cellspacing%3D0%20align%3Dcenter%20width%3D98%25%20class%3DCSS_TB3%20%3E%3Ctbody%3E%3Ctr%20class%3DCSS_TR3%20%3E%3Ctd%20class%3DCSS_TD_RIGHT3%20width%3D50%25%3Elucky7%u5BC6%20%u7801%uFF1A%3C/td%3E%0D%0A%09%09%09%20%20%20%20%20%20%20%20%3Ctd%20width%3D%2250%25%22%20class%3DCSS_TD_LEFT3%3E%3Cinput%20type%3D%27password%27%20maxlength%3D20%20size%3D10%20name%3D%22myText%22%20class%3DCSS_IPT_TEXT_LINE%3E%3C/td%3E%0D%0A%09%09%09%3C/tr%3E%3Ctr%20class%3DCSS_TR3%20%3E%3Ctd%20class%3DCSS_TD_RIGHT3%20width%3D50%25%3E%3C/td%3E%3Ctd%20class%3DCSS_TD_LEFT3%3E%3C/td%3E%3C/tr%3E%3Ctr%20class%3DCSS_TR3%20%3E%3Ctd%20class%3DCSS_TD_CENTER3%20colspan%3D2%20%3E%3Cbr%3E%20%3Cinput%20type%3D%22button%22%20name%3D%22myButton%22%20class%3DCSS_IPT_BTN_SMALL%20value%3D%27%u767B%u9646%27%3E%0D%0A%09%09%09%20%20%20%3C/td%3E%0D%0A%09%09%09%3C/tr%3E%3C/tbody%3E%3C/table%3E";www_Helpor_net=unescape(www_helpor_net);document.write(www_Helpor_net);</SCRIPT>
+					</td>
+	</tr>
+	<tr>
+		<td>
+			<p align=center>
+			<img border=0 height=35 src="images/ShowColumnUserInfo_bottom.gif" width=175></p>
+		</td>
+	</tr>
+</tbody>
+</table>       
+<br>
+<table background="images/ShowColumnClassFun_bg.gif" border=0 cellpadding=0 cellspacing=0 width=175>
+<tbody>
+	<tr>
+		<td>
+			<!-- 标题栏 -->
+			<img border=0 height=45 src="images/ShowColumnClassFun_top.gif" 
+			width=175></td>
+	</tr>
+	<tr>
+		<td>
+			<!-- Content in this table -->
+			
+	<table width=75% align=center>
+	<tr width=100% class=CSS_TD_CENTER1><td width=100% class=CSS_TD_CENTER1>
+	  <table border=0 cellpadding=0 cellspacing=0 width=100% >
+	    <tbody>
+	      <tr class=CSS_TD_CENTER1 >
+	        <td valign=bottom class=CSS_HEAD_MENU ><a href='index.html' onMouseOver=MSHL('_f','','show') onMouseOut=MSHL('_f','','hide')  title='lucky7的网上家园' class=CSS_TD_CENTER1>班级首页</a></td>
+	        <td valign=bottom class=CSS_HEAD_MENU><a href='http://lucky7.poco.cn'  title='我们愿意分享彼此快乐' target="_blank" class=CSS_TD_CENTER1 onMouseOver=MSHL('ShowBoardMenu_f','','show') onMouseOut=MSHL('ShowBoardMenu_f','','hide')>本班相册</a></td>
+	      </tr>
+	      <tr class=CSS_TD_CENTER1 >
+	        <td valign=bottom class=CSS_HEAD_MENU ><a href='01.htm' onMouseOver=MSHL('ShowUserMenu_f','','show') onMouseOut=MSHL('ShowUserMenu_f','','hide')  title='欢迎加入本班建设' class=CSS_TD_CENTER1>关于本班</a></td>
+	        <td valign=bottom class=CSS_HEAD_MENU><a href='http://alumni.163.com/alumni/main.jsp?prov=19&schid=27546&clsid=4695251&year=2001'  title='班级成员详细资料,访问情况,留言,相册等' target="_blank" class=CSS_TD_CENTER1 onMouseOver=MSHL('ShowAddressMenu_f','','show') onMouseOut=MSHL('ShowAddressMenu_f','','hide')>校友录</a></td>
+	      </tr>
+	      <tr class=CSS_TD_CENTER1 >
+	        <td valign=bottom class=CSS_HEAD_MENU ><a href='02.htm' onMouseOver=MSHL('ShowSmsMain_f','','show') onMouseOut=MSHL('ShowSmsMain_f','','hide')  title='积极参与本班活动，踊跃出谋划策' class=CSS_TD_CENTER1>本班快讯</a></td>
+	        <td valign=bottom class=CSS_HEAD_MENU><a href='http://myweb.cn.yahoo.com/userurls.html?ou=gaoerqilucky7@yahoo.cn'  title='欢迎成为我们的伙伴' target="_blank" class=CSS_TD_CENTER1 onMouseOver=MSHL('ShowAlbumMenu_f','','show') onMouseOut=MSHL('ShowAlbumMenu_f','','hide')>友情链接</a></td>
+	      </tr>
+	      <tr class=CSS_TD_CENTER1>            
+	        </tbody>
+	    </table></td>
+	</tr></table>
+	<table border=0 cellpadding=0 cellspacing=0 align=center valign=middle width=75% style='table-layout:fixed; word-break:break-all'><tbody><tr class=CSS_TD_CENTER1 width=100%> <td class=CSS_TD_CENTER1 width=50%></a></td><td class=CSS_TD_CENTER1 width=50%></a></td></tr></tbody></table>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p align=center>
+			<img border=0 height=18 src="images/ShowColumnClassFun_bottom.gif" width=175></p>
+		</td>
+	</tr>
+</tbody>
+</table>       
+<br>
+<table background="images/ShowColumnClassFun_bg.gif" border="0" cellpadding="0" cellspacing="0" width=175>
+<tbody>
+	<tr>
+		<td>
+			<!-- Title -->
+			<img border=0 height=45 src="images/ShowColumnBirthInfo_top.gif" 
+			width=175></td>
+	</tr>
+	<tr>
+		<td>
+			<!-- Content in this table -->
+			<table align=center>	<tr><td class='CSS_TD_CENTER3'>最近更新:2010年02月21日</td></tr></table>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p align=center>
+			
+			<img border=0 height=18 src="images/ShowColumnClassFun_bottom.gif" width=175></p>
+			
+		</td>
+	</tr>
+</tbody>
+</table>       
+<br>
+<br>
+					  </td>
+                      <td width=10></td>
+                      <td valign=top width=418 align=center>
+					  <br>
+					  
+<table background="images/ShowColumnClassInfo_bg.gif" border="0" cellpadding="0" cellspacing="0" width=400>
+<tbody>
+	<tr>
+		<td>
+			<!-- Title -->
+			<img border=0 height=27 src="images/ShowColumnTopBoard_top.gif" 
+			width=400></td>
+	</tr>
+	<tr>
+		<td>
+			<!-- Content in this table -->
+			
+<table width=90%>
+	<tr width=100%>
+		<td width=20%></td>
+		<td width=80%>
+			<marquee scrollamount="1" scrolldelay="60" direction= "up" width=100% height="100">
+			欢迎进入lucky7通讯录<br>由于涉及lucky7资料，故请验证后进入！<br>如有发现错误和过时的信息请及时告诉我们。<br>建议各位到<a href="http://alumni.163.com/alumni/main.jsp?prov=19&schid=27546&clsid=4695251&year=2001" target="_blank" class="style2">校友录</a>留言后再离开!真心感谢!<br>各位请注意：<br>lucky7通讯录将定期进行更新工作，请密切配合！<br>lucky7永久主页为<br>
+			<a href="http://www.google.com/profiles/gaoerqilucky7" target="_blank" class="style1">http://www.google.com/profiles/gaoerqilucky7</a><br>
+			请相互知会！</a><br>
+
+</marquee></td>
+	</tr>
+</table>
+
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p align=center>
+			
+			<img border=0 height=18 src="images/ShowColumnClassInfo_bottom.gif" width=400></p>
+			
+		</td>
+	</tr>
+</tbody>
+</table>       
+<br>
+					  
+<table background="images/ShowColumnClassInfo_bg.gif" border="0" cellpadding="0" cellspacing="0" width=400>
+<tbody>
+	<tr>
+		<td>
+			<!-- Title -->
+			<img border=0 height=27 src="images/ShowColumnClassInfo_top.gif" 
+			width=400></td>
+	</tr>
+	<tr>
+		<td>
+			<!-- Content in this table -->
+			<table border=0 cellpadding=2 cellspacing=1 align=center valign=middle width=90% style='table-layout:fixed; word-break:break-all'><tbody><tr  width=100%> <td  colspan=2 >班级名称：lucky7</td>
+			</tr><tr  width=100%> <td  width=50%>入学年份：2001年</a></td>
+			  <td  width=50%>学生数:男生37 女生30</a></td></tr><tr  width=100%><td >原班长:黎英贤</td><td >副班长:叶志桃</td></tr><tr  width=100%> <td  colspan=2 >班主任:黎畅友/吴志兴</td></tr><tr  width=100%> <td  colspan=2 >lucky7的纪念日为每年1月26日。</td></tr></tbody></table>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p align=center>
+			
+			<img border=0 height=18 src="images/ShowColumnClassInfo_bottom.gif" width=400></p>
+			
+		</td>
+	</tr>
+</tbody>
+</table>       
+<br>
+					  
+<table background="images/ShowColumnClassInfo_bg.gif" border="0" cellpadding="0" cellspacing="0" width=400>
+<tbody>
+	<tr>
+		<td>
+			<!-- Title -->
+			<img border=0 height=27 src="images/ShowColumnWebBulletin_top.gif" 
+			width=400></td>
+	</tr>
+	<tr>
+		<td>
+			<!-- Content in this table -->
+			<p align=center><a href="friend.htm" target="_blank"><span class="style1">海内存知己，天涯若比邻。</span></a><BR>
+			  <span class="style3">发挥团结互助、真心待人的精神做人做事，维护lucky7不可磨灭的声誉。</span><BR>
+			  <span class="style2">我们愿意</span>  <span class="style3">分享你的快乐  倾听你的诉说  分担你的痛苦  交流彼此心得</span><br>
+ </p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p align=center>
+			
+			<img border=0 height=18 src="images/ShowColumnClassInfo_bottom.gif" width=400></p>
+			
+		</td>
+	</tr>
+</tbody>
+</table>       
+<br>
+					  
+<table background="images/ShowColumnClassInfo_bg.gif" border="0" cellpadding="0" cellspacing="0" width=400>
+<tbody>
+	<tr>
+		<td>
+			<!-- Title -->			</td>
+	</tr>
+</tbody>
+</table>       
+
+                      </td>
+					</tr>
+				</tbody>
+				</table>
+            
+          </td>
+          <td background="images/right_b.gif" valign=top 
+            width=38>
+			<img height=5 src="images/right_b.gif" 
+            width=38></td></tr></tbody></table></td></tr>
+  <tr>
+    <td colspan=3><img height=26 src="images/z_f.gif"  width=776>
+	</td>
+  </tr>
+  </tbody>
+</table>
+
+	<center>
+	<br>
+	<br></center>
+	
+</body>
+</html>
